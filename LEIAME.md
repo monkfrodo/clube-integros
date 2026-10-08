@@ -1,6 +1,6 @@
 # Clube Íntegros — página de reabertura (plano anual, R$ 597)
 
-Site estático (`index.html`, `style.css`, `main.js`, `fonts/`, `img/`). Sem build. Mesma identidade do Subida
+Site estático (`index.html`, `style.css`, `main.js`, `img/`). Sem build. Mesma identidade do Subida
 (verde profundo, ouro, creme; Playfair Display, Instrument Serif e Inter locais).
 
 ## O que trocar (topo do `main.js`)

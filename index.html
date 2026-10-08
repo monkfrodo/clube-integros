@@ -3,266 +3,280 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Clube Íntegros — O Acervo</title>
-<meta name="description" content="O método inteiro, todas as gravações, atualizado a cada quinze dias. O Clube Íntegros reabre com 40% de desconto no plano anual.">
-<meta property="og:title" content="Clube Íntegros — O Acervo">
-<meta property="og:description" content="Tudo que eu sei sobre negócio, gravado e guardado num lugar só. Plano anual com 40% de desconto.">
+<title>Clube Íntegros</title>
+<meta name="description" content="O método inteiro e todas as gravações do Íntegros, atualizados a cada quinze dias. Plano anual com 40% de desconto na reabertura.">
+<meta property="og:title" content="Clube Íntegros">
+<meta property="og:description" content="Tudo que eu sei sobre negócio, gravado e guardado num lugar só. Plano anual por R$ 597.">
 <meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English+SC&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/PlayfairDisplay-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="img/favicon.svg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Textura de papel/grão em toda a página -->
-<svg class="defs" width="0" height="0" aria-hidden="true">
-  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0"/></filter>
-  <filter id="paint" x="-10%" y="-10%" width="120%" height="120%">
-    <feTurbulence type="fractalNoise" baseFrequency=".012 .02" numOctaves="4" seed="7" result="n"/>
-    <feDisplacementMap in="SourceGraphic" in2="n" scale="120" xChannelSelector="R" yChannelSelector="G" result="d"/><feGaussianBlur in="d" stdDeviation="14"/>
-  </filter>
-  <filter id="bristle"><feTurbulence type="fractalNoise" baseFrequency=".004 .35" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 .9  0 0 0 0 .7  0 0 0 .5 0"/></filter>
-</svg>
-<div class="grain" aria-hidden="true"></div>
-
-<header class="top">
-  <a class="mark" href="#topo">Íntegros<span>Clube</span></a>
-  <a class="btn btn--small" href="#entrar" data-checkout>Entrar no acervo</a>
-</header>
-
 <main id="topo">
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="hero">
-  <div class="canvas canvas--night" aria-hidden="true">
-    <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
-      <rect width="1600" height="1000" fill="#150f0b"/>
-      <g filter="url(#paint)">
-        <ellipse cx="1180" cy="330" rx="520" ry="380" fill="#8a5a2b"/>
-        <ellipse cx="1260" cy="300" rx="330" ry="230" fill="#c58a3d"/>
-        <ellipse cx="1300" cy="270" rx="150" ry="110" fill="#e9c27a"/>
-        <ellipse cx="300" cy="820" rx="560" ry="260" fill="#3a1d14"/>
-        <ellipse cx="760" cy="980" rx="700" ry="200" fill="#5a2418"/>
-        <ellipse cx="120" cy="200" rx="360" ry="260" fill="#1f2b24"/>
-      </g>
-      <rect width="1600" height="1000" filter="url(#bristle)" opacity=".28"/>
-    </svg>
-    <!-- Se existir img/hero.jpg (pintura de domínio público), ela entra por cima -->
-    <div class="plate" style="--img:url('img/hero.jpg')"></div>
-    <div class="vignette"></div>
-  </div>
+  <header class="nav" aria-label="Navegação principal">
+    <a class="wordmark" href="#topo" aria-label="Clube Íntegros"><strong>Íntegros</strong><span>Clube</span></a>
+    <nav>
+      <a href="#carta">A carta</a>
+      <a href="#dentro">O acervo</a>
+      <a href="#obras">Obras</a>
+      <a href="#oferta">Entrar</a>
+    </nav>
+  </header>
 
-  <div class="hero__inner">
-    <p class="eyebrow reveal">Sala de entrada · Reabertura do acervo</p>
-    <h1 class="reveal">Tudo que eu sei sobre negócio,<br><em>gravado e guardado num lugar só.</em></h1>
-    <p class="lede reveal">O Clube Íntegros é o acervo: o método inteiro, todas as gravações, atualizado a cada quinze dias. Tô reabrindo as portas com 40% de desconto no plano anual.</p>
-
-    <div class="hero__cta reveal">
-      <a class="btn" href="#entrar" data-checkout>Entrar no acervo</a>
-      <p class="price-line"><s>R$ 997</s> <strong>R$ 597</strong> <span>por ano</span></p>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Reabertura · plano anual</p>
+      <h1><span>Tudo que eu sei,</span> <span>num lugar só.</span></h1>
+      <p class="lead">O Clube Íntegros é o acervo: o método inteiro e todas as gravações, atualizado a cada quinze dias. Tô reabrindo o plano anual com 40% de desconto.</p>
+      <div class="hero-actions">
+        <a class="cta" href="#oferta" data-checkout>Entrar no acervo <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="#carta">Por que agora</a>
+      </div>
+      <p class="hero-note">De R$ 997 por R$ 597. O ano inteiro.</p>
+      <p class="deadline" id="deadline" hidden></p>
     </div>
-    <p class="deadline reveal" id="deadline" hidden></p>
-  </div>
 
+    <div class="hero-portrait" aria-hidden="true">
+      <span class="hero-word">acervo</span>
+      <img src="img/sao-jeronimo.webp" alt="" fetchpriority="high">
+      <div class="portrait-caption">
+        <span>—</span>
+        <p>Tudo gravado.<br>Tudo guardado.<br>Tudo atualizado.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ================= CARTA ================= -->
-<section class="paper letter">
-  <div class="wrap wrap--narrow">
-    <p class="room">Sala I</p>
-    <h2>Quarenta mil.</h2>
-    <div class="prose">
-      <p class="drop">Eu ainda acho esse número estranho.</p>
-      <p>Quarenta mil pessoas me ouvem falar de negócio, de família, de burnout e, de vez em quando, de gurus. Com sarcasmo, admito. Nunca precisei de plateia pra isso, e agora tenho uma.</p>
-      <p>Eu poderia fazer uma festa. Postar um print. Escrever "gratidão" com três emojis e vender um curso novo na sequência.</p>
+<!-- CARTA -->
+<section class="thesis section" id="carta">
+  <div class="section-inner thesis-grid">
+    <div>
+      <p class="section-label">Uma carta curta</p>
+      <h2>Quarenta mil.</h2>
+    </div>
+    <div class="thesis-copy">
+      <p>Eu ainda acho esse número estranho.</p>
+      <p>Quarenta mil pessoas me ouvem falar de negócio, de família, de burnout e, de vez em quando, de gurus. Com sarcasmo, admito.</p>
+      <p>Eu poderia fazer uma festa. Postar um print. Escrever "gratidão" e vender um curso novo na sequência.</p>
       <p>Mas não vou.</p>
-      <p>O que eu fiz foi abrir o acervo.</p>
-      <p>O Clube Íntegros sempre foi isso: tudo que eu gravei, tudo que eu escrevi, tudo que eu aprendi errando com meu próprio negócio, organizado num lugar só. Eu cobrava R$ 997 por ano, ou R$ 97 por mês. Pra quem chegou agora, tô cobrando R$ 597 pelo ano inteiro.</p>
-      <p>Quarenta por cento a menos. Não é promoção de Black Friday, é o meu jeito de dizer obrigado sem fazer discurso.</p>
-      <p class="sign">Kevin Neger</p>
+      <p>O que eu fiz foi abrir o acervo. O Clube Íntegros guarda tudo que eu gravei, escrevi e aprendi errando no meu próprio negócio. Eu cobrava R$ 997 por ano, ou R$ 97 por mês. Pra quem chegou agora, o ano inteiro custa R$ 597.</p>
+      <p class="pullquote">Quarenta por cento a menos.<br>Obrigado, sem discurso.</p>
+      <p class="signature">Kevin Eger</p>
     </div>
   </div>
 </section>
 
-<!-- ================= AS PINTURAS / PAUSA ================= -->
-<section class="gallery" aria-label="Obras">
-  <figure class="work work--wide">
-    <div class="frame"><div class="canvas canvas--warm"><svg viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1200" height="520" fill="#2a1a10"/><g filter="url(#paint)"><ellipse cx="300" cy="260" rx="380" ry="200" fill="#6b3f1f"/><ellipse cx="820" cy="200" rx="360" ry="170" fill="#b5772f"/><ellipse cx="900" cy="170" rx="160" ry="80" fill="#efd08b"/><ellipse cx="500" cy="470" rx="620" ry="120" fill="#1b130c"/></g><rect width="1200" height="520" filter="url(#bristle)" opacity=".3"/></svg><div class="plate" style="--img:url('img/obra-1.jpg')"></div></div></div>
-    <figcaption>Obra I · <em>espaço para uma pintura de domínio público — ver LEIAME</em></figcaption>
-  </figure>
+<!-- ANTES / DEPOIS -->
+<section class="contrast section">
+  <div class="section-inner">
+    <p class="section-label">O acervo</p>
+    <div class="contrast-grid">
+      <article>
+        <span>Hoje</span>
+        <h3>Pedaços soltos.</h3>
+        <p>Um vídeo salvo aqui, um post ali, uma live que você jurou assistir depois. Tudo bom, e nada em ordem.</p>
+      </article>
+      <div class="contrast-mark" aria-hidden="true">→</div>
+      <article class="contrast-after">
+        <span>Dentro do Clube</span>
+        <h3>Um lugar só.</h3>
+        <p>O método na ordem em que faz sentido, as gravações guardadas, e uma atualização nova a cada quinze dias.</p>
+      </article>
+    </div>
+  </div>
 </section>
 
-<!-- ================= O QUE TEM NO ACERVO ================= -->
-<section class="ink rooms">
-  <div class="wrap">
-    <p class="room">Sala II</p>
-    <h2>O que tem lá dentro</h2>
-    <p class="sub">Sem módulo secreto, sem bônus de última hora. É um acervo. A pessoa entra e anda por ele no ritmo que quiser.</p>
-
-    <ol class="catalog">
-      <li>
-        <span class="num">I</span>
+<!-- O QUE TEM DENTRO -->
+<section class="monthly section" id="dentro">
+  <div class="section-inner monthly-grid">
+    <div class="monthly-intro">
+      <p class="section-label">Lá dentro</p>
+      <h2>Sem módulo secreto.</h2>
+      <p>É um acervo. Você entra e anda por ele no ritmo que a vida deixar. Sem bônus de última hora e sem segredo guardado pra depois.</p>
+    </div>
+    <div class="monthly-list">
+      <article>
+        <span>—</span>
         <div>
           <h3>O método inteiro</h3>
-          <p>A forma como eu penso modelo de negócio, preço e tempo, do começo ao fim. Não é uma aula solta sobre tráfego. É a lógica que sustenta todo o resto, na ordem em que faz sentido.</p>
+          <p>A forma como eu penso modelo de negócio, preço e tempo, do começo ao fim. A lógica que sustenta o resto, na ordem em que faz sentido.</p>
         </div>
-      </li>
-      <li>
-        <span class="num">II</span>
+      </article>
+      <article>
+        <span>—</span>
         <div>
           <h3>Todas as gravações</h3>
-          <p>Cada aula, cada encontro, cada explicação que eu já gravei. Tá tudo lá, guardado. Você não precisa ter estado presente, e nem precisa decorar nada: volta e assiste de novo quando a vida pedir.</p>
+          <p>Cada aula, cada encontro, cada explicação que eu já gravei. Você não precisa ter estado presente. Volta e assiste quando a vida pedir.</p>
         </div>
-      </li>
-      <li>
-        <span class="num">III</span>
+      </article>
+      <article>
+        <span>—</span>
         <div>
           <h3>Atualização a cada quinze dias</h3>
-          <p>O acervo não é um museu parado. De quinze em quinze dias entra coisa nova. O que eu aprendi, o que mudou, o que eu errei e corrigi. Quem assina o ano acompanha todas.</p>
+          <p>O acervo não fica parado. De quinze em quinze dias entra coisa nova: o que eu aprendi, o que mudou, o que eu errei e corrigi.</p>
         </div>
-      </li>
-      <li>
-        <span class="num">IV</span>
+      </article>
+      <article>
+        <span>—</span>
         <div>
-          <h3>Acesso por doze meses</h3>
-          <p>Um pagamento. Doze meses dentro. Sem ter que lembrar de renovar todo mês, sem cobrança aparecendo na fatura quando você já nem lembra do que é.</p>
+          <h3>Doze meses de acesso</h3>
+          <p>Um pagamento e o ano inteiro dentro, com todas as atualizações do período.</p>
         </div>
-      </li>
-    </ol>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ================= PRA QUEM É ================= -->
-<section class="paper fit">
-  <div class="wrap">
-    <p class="room">Sala III</p>
-    <h2>Pra quem é. E pra quem não é.</h2>
+<!-- OBRAS -->
+<section class="heroes section" id="obras">
+  <div class="section-inner">
+    <div class="heroes-heading">
+      <p class="section-label">Obras</p>
+      <h2>Decidir sempre pesou.</h2>
+      <p>Muito antes de existir planilha, alguém já pintava a dúvida de quem precisa escolher.</p>
+    </div>
+    <div class="gallery">
+      <figure class="work">
+        <div class="frame-outer"><div class="frame-inner"><img src="img/hercules.webp" alt="Pintura: Hércules na encruzilhada" style="object-position:50% 40%" loading="lazy"></div></div>
+        <figcaption><strong>Hércules na encruzilhada</strong><p>O caminho fácil sempre parece mais curto. Quase nunca é.</p></figcaption>
+      </figure>
+      <figure class="work">
+        <div class="frame-outer"><div class="frame-inner"><img src="img/bosch.webp" alt="Pintura: eremita numa paisagem" style="object-position:50% 70%" loading="lazy"></div></div>
+        <figcaption><strong>O eremita</strong><p>Tem decisão que só se toma longe do barulho.</p></figcaption>
+      </figure>
+      <figure class="work">
+        <div class="frame-outer"><div class="frame-inner"><img src="img/sao-miguel.jpg" alt="Pintura: São Miguel Arcanjo vencendo o dragão" style="object-position:50% 30%" loading="lazy"></div></div>
+        <figcaption><strong>São Miguel Arcanjo</strong><p>Em algum momento, a gente precisa enfrentar o que adiou.</p></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-    <div class="cols">
-      <div class="col">
+<!-- PRA QUEM -->
+<section class="fit section">
+  <div class="section-inner">
+    <p class="section-label">Pra quem é</p>
+    <h2>E pra quem não é.</h2>
+    <div class="fit-grid">
+      <div>
         <h3>Vai gostar daqui se</h3>
         <ul>
-          <li>Você tem um negócio, ou tá tentando ter, e já desconfia que o problema não é falta de esforço.</li>
-          <li>Você trabalha mais do que quando era CLT e o resultado não acompanha.</li>
+          <li>Você tem um negócio, ou tá construindo um, e desconfia que o problema não é falta de esforço.</li>
+          <li>Trabalha mais do que quando era CLT e o resultado não acompanha.</li>
           <li>Já comprou "método" de guru e sobrou só a nota fiscal.</li>
-          <li>Prefere entender a lógica das coisas do que copiar o passo a passo de alguém.</li>
-          <li>Quer um lugar pra voltar toda vez que bater a dúvida, sem depender de agenda de ninguém.</li>
+          <li>Prefere entender a lógica das coisas a copiar o passo a passo de alguém.</li>
         </ul>
       </div>
-      <div class="col col--no">
+      <div>
         <h3>Melhor nem entrar se</h3>
         <ul>
-          <li>Você procura o segredo. A tecnicazinha que vai fazer o negócio faturar sozinho em trinta dias.</li>
+          <li>Você procura o segredo, a tecnicazinha que faz o negócio faturar sozinho em trinta dias.</li>
           <li>Quer que eu faça por você. O acervo mostra o caminho, mas quem anda é você.</li>
-          <li>Acha que sucesso é Rolex, terno e foto de palco. Aqui o assunto é outro.</li>
+          <li>Acha que sucesso é Rolex, terno e foto de palco.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PAUSA / PINTURA 2 ================= -->
-<section class="quote-band">
-  <div class="canvas canvas--green" aria-hidden="true">
-    <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice"><rect width="1600" height="700" fill="#101a15"/><g filter="url(#paint)"><ellipse cx="400" cy="300" rx="560" ry="300" fill="#24392e"/><ellipse cx="1250" cy="420" rx="520" ry="260" fill="#3d4a2c"/><ellipse cx="1100" cy="200" rx="300" ry="140" fill="#8b7a43"/><ellipse cx="800" cy="680" rx="900" ry="160" fill="#0a100d"/></g><rect width="1600" height="700" filter="url(#bristle)" opacity=".25"/></svg>
-    <div class="plate" style="--img:url('img/obra-2.jpg')"></div>
-    <div class="vignette"></div>
+<!-- CREDO -->
+<section class="creed section">
+  <div class="section-inner creed-inner">
+    <p class="section-label">Por quem</p>
+    <h2>Meu sucesso neste mundo é almoçar com meus filhos todos os dias.</h2>
+    <p class="creed-text">Um privilégio inigualável. Foi por isso que eu reorganizei o meu negócio, e é por isso que o acervo existe.</p>
+    <p class="creed-cite">Kevin Eger</p>
   </div>
-  <blockquote>
-    <p>Meu sucesso neste mundo é almoçar com meus filhos todos os dias.<br><em>Um privilégio inigualável.</em></p>
-    <cite>Kevin Neger</cite>
-  </blockquote>
 </section>
 
-<!-- ================= A OFERTA ================= -->
-<section class="paper offer" id="entrar">
-  <div class="wrap wrap--narrow">
-    <p class="room">Sala IV</p>
-    <h2>A conta</h2>
-    <p class="sub">Pra você não precisar de calculadora, deixei tudo aqui na mesa.</p>
-
-    <div class="ledger">
-      <div class="row"><span>Mensal, 12 meses × R$ 97</span><span>R$ 1.164</span></div>
-      <div class="row"><span>Anual, preço de sempre</span><span>R$ 997</span></div>
-      <div class="row row--now"><span>Anual, reabertura <em>(40% a menos)</em></span><span>R$ 597</span></div>
+<!-- OFERTA -->
+<section class="offer section" id="oferta">
+  <div class="section-inner">
+    <div class="offer-heading">
+      <p class="section-label">Entre pro Clube</p>
+      <h2>A conta.</h2>
+      <p>Deixei tudo na mesa. O mensal continua existindo, mas o anual agora custa pouco mais da metade dos doze meses.</p>
     </div>
 
-    <div class="ticket">
-      <div class="ticket__tag">Plano anual · Reabertura</div>
-      <p class="ticket__old"><s>R$ 997</s></p>
-      <p class="ticket__price"><span class="cur">R$</span>597</p>
-      <p class="ticket__per">por ano, o que dá R$ 49,75 por mês</p>
-      <ul class="ticket__list">
-        <li>Acesso ao acervo completo por 12 meses</li>
-        <li>O método inteiro e todas as gravações</li>
-        <li>Atualizações a cada quinze dias</li>
-        <li>7 dias de garantia, como manda a lei, sem cara feia</li>
-      </ul>
-      <a class="btn btn--gold" href="#" data-checkout>Quero entrar no acervo</a>
-      <p class="ticket__note" id="deadline-2" hidden></p>
+    <div class="plans">
+      <article class="plan">
+        <p class="plan-kicker">Plano mensal</p>
+        <p class="price"><span>R$</span><strong>97</strong><small>/mês</small></p>
+        <p>Acesso ao acervo enquanto a assinatura estiver ativa. Doze meses somam R$ 1.164.</p>
+        <ul>
+          <li>O método inteiro</li>
+          <li>Todas as gravações</li>
+          <li>Atualizações quinzenais</li>
+        </ul>
+        <a class="cta" href="#" data-checkout-monthly>Entrar no mensal <span aria-hidden="true">↗</span></a>
+      </article>
+
+      <article class="plan plan-featured">
+        <div class="plan-topline"><p class="plan-kicker">Plano anual</p><span>40% a menos</span></div>
+        <p class="annual-price"><small>De R$ 997 por</small><strong><span>R$</span>597</strong></p>
+        <p>Um pagamento, doze meses dentro. Dá R$ 49,75 por mês.</p>
+        <ul>
+          <li>O método inteiro</li>
+          <li>Todas as gravações</li>
+          <li>Atualizações quinzenais por 12 meses</li>
+          <li>7 dias de garantia, como manda a lei</li>
+        </ul>
+        <a class="cta" href="#" data-checkout>Entrar no anual <span aria-hidden="true">↗</span></a>
+        <p class="plan-note" id="deadline-2" hidden></p>
+      </article>
     </div>
 
-    <p class="after">O preço volta a R$ 997 quando a reabertura acabar. Não porque eu queira criar pressão. É que os R$ 997 sempre foram o valor justo do que tem lá dentro, e o desconto é um agradecimento, não uma nova tabela.</p>
+    <p class="after">O preço do anual volta a R$ 997 quando a reabertura acabar. Os R$ 997 sempre foram o valor justo do que tem lá dentro. O desconto é um agradecimento.</p>
   </div>
 </section>
 
-<!-- ================= FAQ ================= -->
-<section class="ink faq">
-  <div class="wrap wrap--narrow">
-    <p class="room">Sala V</p>
-    <h2>O que costumam me perguntar</h2>
-
-    <details>
-      <summary>Preciso ter um negócio grande pra aproveitar?</summary>
-      <p>Não. Preciso que você tenha um negócio, ou que esteja construindo um. Tem gente que entra faturando pouco e gente que entra faturando bem e dormindo mal. O acervo serve pros dois, porque a pergunta de fundo é a mesma: esse modelo fecha com o tempo que eu tenho?</p>
-    </details>
-    <details>
-      <summary>É só gravação? Vou ficar sozinho?</summary>
-      <p>É acervo. Você assiste, aplica e volta quando precisar. Se você quer alguém olhando o seu caso de perto, existe o Fundamentos, que é outro nível de acompanhamento. Mas muita gente começa por aqui, e tudo bem.</p>
-    </details>
-    <details>
-      <summary>Por que o desconto agora?</summary>
-      <p>Porque cheguei a quarenta mil seguidores e achei justo que quem chegou depois tivesse uma porta mais barata. Só isso. Não tem história de bastidor.</p>
-    </details>
-    <details>
-      <summary>E se eu não gostar?</summary>
-      <p>Você tem sete dias pra pedir o dinheiro de volta, direto pelo suporte. É direito seu, e eu não faço pergunta.</p>
-    </details>
-    <details>
-      <summary>Já assino o mensal. Como fica?</summary>
-      <p>Fala com a gente pelo suporte e a gente resolve. Não quero que ninguém pague duas vezes por causa de um calendário.</p>
-    </details>
-    <details>
-      <summary>O que acontece depois dos doze meses?</summary>
-      <p>Você decide. Se o acervo tiver valido a pena, renova. Se não, sai com tudo que aprendeu e sem briga.</p>
-    </details>
-  </div>
-</section>
-
-<!-- ================= FECHAMENTO ================= -->
-<section class="closing">
-  <div class="canvas canvas--night" aria-hidden="true">
-    <svg viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice"><rect width="1600" height="800" fill="#120c09"/><g filter="url(#paint)"><ellipse cx="800" cy="200" rx="620" ry="260" fill="#7a4a22"/><ellipse cx="800" cy="170" rx="260" ry="120" fill="#e0b46a"/><ellipse cx="300" cy="760" rx="700" ry="200" fill="#2a130d"/><ellipse cx="1350" cy="720" rx="600" ry="180" fill="#35200f"/></g><rect width="1600" height="800" filter="url(#bristle)" opacity=".25"/></svg>
-    <div class="plate" style="--img:url('img/obra-3.jpg')"></div>
-    <div class="vignette"></div>
-  </div>
-  <div class="closing__inner wrap wrap--narrow">
-    <h2>Meu filho foi até o meu escritório e pediu pra eu colocá-lo na agenda.</h2>
-    <p>Culpa minha, evidentemente.</p>
-    <p>Eu construí um negócio que me consumia e demorei pra perceber. O acervo existe porque eu não quero que você demore tanto quanto eu.</p>
-    <p>A pergunta que fica é pra você: o seu negócio cabe na sua vida, ou a sua vida tá cabendo no seu negócio?</p>
-    <a class="btn btn--gold" href="#entrar" data-checkout>Entrar no acervo por R$ 597</a>
-    <p class="ps"><strong>P.S.</strong> Se você chegou até aqui e ainda tá em dúvida, tudo bem. Dúvida é saudável. Mas a reabertura tem fim, e o acervo, quando você entra, não sai mais do seu lado.</p>
+<!-- FAQ -->
+<section class="faq section">
+  <div class="section-inner faq-grid">
+    <div>
+      <p class="section-label">Perguntas diretas</p>
+      <h2>Antes de entrar.</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Preciso ter um negócio grande? <span>+</span></summary>
+        <p>Não. Preciso que você tenha um negócio, ou esteja construindo um. Tem gente que entra faturando pouco e gente que entra faturando bem e dormindo mal. A pergunta de fundo é a mesma: esse modelo fecha com o tempo que eu tenho?</p>
+      </details>
+      <details>
+        <summary>É só gravação? Vou ficar sozinho? <span>+</span></summary>
+        <p>É acervo. Você assiste, aplica e volta quando precisar. Se quiser alguém olhando o seu caso de perto, existe o Fundamentos, que é outro nível de acompanhamento. Muita gente começa por aqui, e tudo bem.</p>
+      </details>
+      <details>
+        <summary>Por que o desconto agora? <span>+</span></summary>
+        <p>Cheguei a quarenta mil seguidores e achei justo que quem chegou depois tivesse uma porta mais barata. Só isso.</p>
+      </details>
+      <details>
+        <summary>E se eu não gostar? <span>+</span></summary>
+        <p>Você tem sete dias pra pedir o dinheiro de volta, direto pelo suporte. É direito seu, e eu não faço pergunta.</p>
+      </details>
+      <details>
+        <summary>Já assino o mensal. Como fica? <span>+</span></summary>
+        <p>Fala com a gente pelo suporte e a gente resolve. Ninguém deveria pagar duas vezes por causa de calendário.</p>
+      </details>
+      <details>
+        <summary>O que acontece depois dos doze meses? <span>+</span></summary>
+        <p>Você decide. Se o acervo valeu a pena, renova. Se não, sai com tudo que aprendeu e sem briga.</p>
+      </details>
+    </div>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <p class="mark mark--foot">Íntegros<span>Clube</span></p>
-  <p>© <span id="year">2026</span> Íntegros · Todos os direitos reservados</p>
-  <p class="legal">Os resultados dependem da aplicação de cada pessoa. Este conteúdo não garante faturamento.</p>
+  <a class="wordmark" href="#topo"><strong>Íntegros</strong><span>Clube</span></a>
+  <p>Tudo que eu sei sobre negócio, gravado e guardado num lugar só.</p>
+  <a class="back" href="#topo">Voltar ao início ↑</a>
+  <small>© <span id="year">2026</span> Íntegros. Os resultados dependem da aplicação de cada pessoa e não há garantia de faturamento.</small>
 </footer>
 
 <script src="main.js"></script>

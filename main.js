@@ -1,6 +1,6 @@
 /* ===== CONFIGURAÇÃO — só mexa aqui ===== */
-const CHECKOUT_ANUAL   = "#";   // link do checkout do plano anual (R$ 597)
-const CHECKOUT_MENSAL  = "#";   // link do checkout do plano mensal (R$ 97)
+const CHECKOUT_ANUAL   = "https://pay.assiny.com.br/567707/node/lDJo3D";   // plano anual (R$ 597)
+const CHECKOUT_MENSAL  = "https://pay.assiny.com.br/vHsATx/node/P7CRt7";   // plano mensal (R$ 97)
 const OFFER_END        = null;  // ex.: "2026-10-31T23:59:00-03:00". null esconde a data
 /* ======================================= */
 

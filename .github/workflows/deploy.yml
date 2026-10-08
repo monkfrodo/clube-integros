@@ -1,0 +1,36 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: cloudflare-pages-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy clube-integros
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Stage public files
+        run: |
+          rsync -a ./ "$RUNNER_TEMP/site/" \
+            --exclude='.git*' --exclude='.github' --exclude='.claude*' \
+            --exclude='CLAUDE.md' --exclude='AGENTS.md' --exclude='LEIAME.md' --exclude='README.md'
+
+      - name: Deploy
+        run: npx --yes wrangler@4 pages deploy "$RUNNER_TEMP/site" --project-name=clube-integros --branch=main

@@ -25,3 +25,15 @@ if (OFFER_END) {
     });
   }
 }
+
+// Barra fixa no celular: aparece depois da primeira dobra e some quando a oferta está na tela
+(function () {
+  const bar = document.getElementById("sticky");
+  const hero = document.querySelector(".entry");
+  const offer = document.getElementById("oferta");
+  if (!bar || !hero || !offer || !("IntersectionObserver" in window)) return;
+  let heroOut = false, offerIn = false;
+  const update = () => { bar.hidden = !(heroOut && !offerIn); };
+  new IntersectionObserver(es => { heroOut = !es[0].isIntersecting; update(); }).observe(hero);
+  new IntersectionObserver(es => { offerIn = es[0].isIntersecting; update(); }, { threshold: .05 }).observe(offer);
+})();

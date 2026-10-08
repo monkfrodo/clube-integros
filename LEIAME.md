@@ -8,7 +8,7 @@ Site estático (`index.html`, `style.css`, `main.js`, `img/`). Sem build. Mesma 
 - `OFFER_END`: data final da reabertura. Com `null`, nenhuma data aparece.
 
 ## Imagens
-As pinturas (`img/`) vêm do repositório `subida` (mesmas das páginas internas). Troque por outras se quiser.
+As pinturas (`img/`) são do acervo de domínio público do Met e do Cleveland Museum of Art, vindas da pasta do Drive. `caracciolo-vocacao-sao-mateus.webp` ficou de reserva, sem uso na página.
 
 ## Conferir antes de publicar
 - 7 dias de garantia e a resposta sobre renovação no FAQ: precisam bater com a regra real do checkout.

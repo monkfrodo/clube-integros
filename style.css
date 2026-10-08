@@ -52,6 +52,7 @@ h3{font-size:1.7rem;line-height:1.15}
 .entry__price s{color:var(--ink-soft);margin-right:6px}
 .entry__price strong{font-size:2.5rem;font-weight:600;color:var(--verde)}
 .entry__price span{font-family:var(--reader);font-style:italic;font-size:1rem;color:var(--ink-soft);margin-left:4px}
+.text-link{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--verde);padding:10px 0;border-bottom:1px solid var(--verde)}
 .deadline{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro)}
 
 /* pinturas em moldura de passe-partout */
@@ -109,6 +110,17 @@ h3{font-size:1.7rem;line-height:1.15}
 .fit__yes li::before{content:"";position:absolute;left:2px;top:1.45em;width:12px;height:6px;border-left:2px solid var(--verde);border-bottom:2px solid var(--verde);transform:rotate(-45deg)}
 .fit__no li::before{content:"";position:absolute;left:0;top:1.6em;width:14px;border-top:2px solid var(--ink-soft);opacity:.7}
 .fit__no li{color:var(--ink-soft)}
+
+/* casos */
+.cases{padding:clamp(80px,10vw,140px) 0;background:var(--bg-warm);border-block:1px solid var(--line)}
+.cases h2{margin:16px 0 20px;max-width:15ch}
+.cases__intro{max-width:36rem;color:var(--ink-soft);font-style:italic}
+.cases__grid{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(36px,6vw,90px)}
+.cases__grid article{padding:30px 0 34px;border-top:1px solid var(--verde);display:grid;gap:10px;align-content:start}
+.cases__grid h3{font-size:2rem}
+.cases__result{font-family:var(--display);font-style:italic;font-size:1.45rem;line-height:1.2;color:var(--ouro)}
+.cases__grid p:last-child{color:var(--ink-soft)}
+.cases__note{margin-top:24px;font-size:.9rem;font-style:italic;color:var(--ink-soft)}
 
 /* credo (única seção escura) */
 .creed{background:var(--verde-deep);color:var(--creme);display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1fr);gap:clamp(36px,7vw,110px);align-items:center;padding:clamp(80px,10vw,140px) clamp(20px,5vw,72px)}
@@ -181,7 +193,7 @@ footer p{max-width:44rem}
   .letter__body{grid-template-columns:minmax(0,1fr)}
   .note{position:static;display:block;width:auto;text-align:left;margin-bottom:6px}
   .note::after{content:""}
-  .creed,.offer__grid,.faq__grid,.fit__grid{grid-template-columns:1fr}
+  .creed,.offer__grid,.faq__grid,.fit__grid,.cases__grid{grid-template-columns:1fr}
   .creed__plate{width:min(100%,320px)}
   .canvas-band{height:auto;display:grid}
   .canvas-band img{height:340px}

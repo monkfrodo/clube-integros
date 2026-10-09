@@ -3,267 +3,381 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Clube Íntegros — O Acervo</title>
-<meta name="description" content="O método inteiro, todas as gravações, atualizado a cada quinze dias. O Clube Íntegros reabre com 40% de desconto no plano anual.">
-<meta property="og:title" content="Clube Íntegros — O Acervo">
-<meta property="og:description" content="Tudo que eu sei sobre negócio, gravado e guardado num lugar só. Plano anual com 40% de desconto.">
+<title>Clube Íntegros</title>
+<meta name="description" content="O método da Íntegros inteiro, com todas as gravações, atualizado a cada quinze dias. Plano anual com 40% de desconto na reabertura.">
+<meta property="og:title" content="Clube Íntegros">
+<meta property="og:description" content="Você trabalha mais do que quando era CLT e o negócio continua não fechando. Existe uma razão. Plano anual por R$ 597.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English+SC&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Textura de papel/grão em toda a página -->
-<svg class="defs" width="0" height="0" aria-hidden="true">
-  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0"/></filter>
-  <filter id="paint" x="-10%" y="-10%" width="120%" height="120%">
-    <feTurbulence type="fractalNoise" baseFrequency=".012 .02" numOctaves="4" seed="7" result="n"/>
-    <feDisplacementMap in="SourceGraphic" in2="n" scale="120" xChannelSelector="R" yChannelSelector="G" result="d"/><feGaussianBlur in="d" stdDeviation="14"/>
-  </filter>
-  <filter id="bristle"><feTurbulence type="fractalNoise" baseFrequency=".004 .35" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 .9  0 0 0 0 .7  0 0 0 .5 0"/></filter>
-</svg>
-<div class="grain" aria-hidden="true"></div>
-
 <header class="top">
-  <a class="mark" href="#topo">Íntegros<span>Clube</span></a>
-  <a class="btn btn--small" href="#entrar" data-checkout>Entrar no acervo</a>
+  <a class="wordmark" href="#topo" aria-label="Clube Íntegros"><em>Íntegros</em><span>Clube</span></a>
+  <a class="top__link" href="#oferta">Entrar</a>
 </header>
 
 <main id="topo">
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="canvas canvas--night" aria-hidden="true">
-    <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
-      <rect width="1600" height="1000" fill="#150f0b"/>
-      <g filter="url(#paint)">
-        <ellipse cx="1180" cy="330" rx="520" ry="380" fill="#8a5a2b"/>
-        <ellipse cx="1260" cy="300" rx="330" ry="230" fill="#c58a3d"/>
-        <ellipse cx="1300" cy="270" rx="150" ry="110" fill="#e9c27a"/>
-        <ellipse cx="300" cy="820" rx="560" ry="260" fill="#3a1d14"/>
-        <ellipse cx="760" cy="980" rx="700" ry="200" fill="#5a2418"/>
-        <ellipse cx="120" cy="200" rx="360" ry="260" fill="#1f2b24"/>
-      </g>
-      <rect width="1600" height="1000" filter="url(#bristle)" opacity=".28"/>
-    </svg>
-    <!-- Se existir img/hero.jpg (pintura de domínio público), ela entra por cima -->
-    <div class="plate" style="--img:url('img/hero.jpg')"></div>
-    <div class="vignette"></div>
-  </div>
-
-  <div class="hero__inner">
-    <p class="eyebrow reveal">Sala de entrada · Reabertura do acervo</p>
-    <h1 class="reveal">Tudo que eu sei sobre negócio,<br><em>gravado e guardado num lugar só.</em></h1>
-    <p class="lede reveal">O Clube Íntegros é o acervo: o método inteiro, todas as gravações, atualizado a cada quinze dias. Tô reabrindo as portas com 40% de desconto no plano anual.</p>
-
-    <div class="hero__cta reveal">
-      <a class="btn" href="#entrar" data-checkout>Entrar no acervo</a>
-      <p class="price-line"><s>R$ 997</s> <strong>R$ 597</strong> <span>por ano</span></p>
+<!-- 1. ENTRADA: a dor -->
+<section class="entry">
+  <div class="entry__text">
+    <p class="label">Clube Íntegros · reabertura do acervo</p>
+    <h1>Você trabalha mais do que quando era CLT. <em>E o negócio continua não fechando.</em></h1>
+    <p class="lede">Existe uma razão, e ela não passa por você ser desorganizado. O Clube Íntegros guarda o método que mostra onde a conta quebra e como refazê-la: todas as aulas, todas as gravações, atualizado a cada quinze dias.</p>
+    <div class="entry__action">
+      <a class="btn" href="#acervo">Conhecer o acervo <span aria-hidden="true">→</span></a>
+      <a class="text-link" href="#casos">Ver quem já passou por aqui</a>
     </div>
-    <p class="deadline reveal" id="deadline" hidden></p>
+    <p class="entry__by">Por Kevin Eger, fundador da Íntegros</p>
   </div>
 
-</section>
-
-<!-- ================= CARTA ================= -->
-<section class="paper letter">
-  <div class="wrap wrap--narrow">
-    <p class="room">Sala I</p>
-    <h2>Quarenta mil.</h2>
-    <div class="prose">
-      <p class="drop">Eu ainda acho esse número estranho.</p>
-      <p>Quarenta mil pessoas me ouvem falar de negócio, de família, de burnout e, de vez em quando, de gurus. Com sarcasmo, admito. Nunca precisei de plateia pra isso, e agora tenho uma.</p>
-      <p>Eu poderia fazer uma festa. Postar um print. Escrever "gratidão" com três emojis e vender um curso novo na sequência.</p>
-      <p>Mas não vou.</p>
-      <p>O que eu fiz foi abrir o acervo.</p>
-      <p>O Clube Íntegros sempre foi isso: tudo que eu gravei, tudo que eu escrevi, tudo que eu aprendi errando com meu próprio negócio, organizado num lugar só. Eu cobrava R$ 997 por ano, ou R$ 97 por mês. Pra quem chegou agora, tô cobrando R$ 597 pelo ano inteiro.</p>
-      <p>Quarenta por cento a menos. Não é promoção de Black Friday, é o meu jeito de dizer obrigado sem fazer discurso.</p>
-      <p class="sign">Kevin Neger</p>
+  <figure class="plate entry__plate">
+    <div class="plate__mat">
+      <img src="img/ribera-sao-jeronimo.webp" alt="Pintura: São Jerônimo com a caveira, o livro e o tinteiro, de Jusepe de Ribera" style="object-position:50% 20%" fetchpriority="high">
     </div>
-  </div>
-</section>
-
-<!-- ================= AS PINTURAS / PAUSA ================= -->
-<section class="gallery" aria-label="Obras">
-  <figure class="work work--wide">
-    <div class="frame"><div class="canvas canvas--warm"><svg viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1200" height="520" fill="#2a1a10"/><g filter="url(#paint)"><ellipse cx="300" cy="260" rx="380" ry="200" fill="#6b3f1f"/><ellipse cx="820" cy="200" rx="360" ry="170" fill="#b5772f"/><ellipse cx="900" cy="170" rx="160" ry="80" fill="#efd08b"/><ellipse cx="500" cy="470" rx="620" ry="120" fill="#1b130c"/></g><rect width="1200" height="520" filter="url(#bristle)" opacity=".3"/></svg><div class="plate" style="--img:url('img/obra-1.jpg')"></div></div></div>
-    <figcaption>Obra I · <em>espaço para uma pintura de domínio público — ver LEIAME</em></figcaption>
+    <figcaption class="plate__label"><strong>São Jerônimo · Jusepe de Ribera</strong> Estudar, guardar, voltar a ler.</figcaption>
   </figure>
 </section>
 
-<!-- ================= O QUE TEM NO ACERVO ================= -->
-<section class="ink rooms">
-  <div class="wrap">
-    <p class="room">Sala II</p>
-    <h2>O que tem lá dentro</h2>
-    <p class="sub">Sem módulo secreto, sem bônus de última hora. É um acervo. A pessoa entra e anda por ele no ritmo que quiser.</p>
-
-    <ol class="catalog">
-      <li>
-        <span class="num">I</span>
-        <div>
-          <h3>O método inteiro</h3>
-          <p>A forma como eu penso modelo de negócio, preço e tempo, do começo ao fim. Não é uma aula solta sobre tráfego. É a lógica que sustenta todo o resto, na ordem em que faz sentido.</p>
-        </div>
-      </li>
-      <li>
-        <span class="num">II</span>
-        <div>
-          <h3>Todas as gravações</h3>
-          <p>Cada aula, cada encontro, cada explicação que eu já gravei. Tá tudo lá, guardado. Você não precisa ter estado presente, e nem precisa decorar nada: volta e assiste de novo quando a vida pedir.</p>
-        </div>
-      </li>
-      <li>
-        <span class="num">III</span>
-        <div>
-          <h3>Atualização a cada quinze dias</h3>
-          <p>O acervo não é um museu parado. De quinze em quinze dias entra coisa nova. O que eu aprendi, o que mudou, o que eu errei e corrigi. Quem assina o ano acompanha todas.</p>
-        </div>
-      </li>
-      <li>
-        <span class="num">IV</span>
-        <div>
-          <h3>Acesso por doze meses</h3>
-          <p>Um pagamento. Doze meses dentro. Sem ter que lembrar de renovar todo mês, sem cobrança aparecendo na fatura quando você já nem lembra do que é.</p>
-        </div>
-      </li>
-    </ol>
+<!-- 2. CENÁRIO: agitar -->
+<section class="scene" id="cenario">
+  <div class="scene__grid">
+    <div class="scene__head">
+      <p class="label">O cenário</p>
+      <h2>Eu conheço essa rotina.</h2>
+      <figure class="plate scene__plate">
+        <div class="plate__mat"><img src="img/millet-refugio-tempestade.webp" alt="Pintura: uma mulher carregando lenha e uma criança caminham contra o vento de uma tempestade, de Jean-François Millet" loading="lazy"></div>
+        <figcaption class="plate__label"><strong>Retreat from the Storm · Millet</strong> Carregar tudo sozinho, contra o vento.</figcaption>
+      </figure>
+    </div>
+    <div class="scene__body">
+      <p class="scene__list">Celular 24h. Reunião que vira outra reunião. Domingo à tarde, a família na sala e você olhando o WhatsApp.</p>
+      <p>Eu sempre tive muito orgulho de trabalhar mais que os outros e o resultado não poderia ser melhor: um burnout aos 24 anos de idade.</p>
+      <p>Depois, já com negócio próprio, meu filho foi até o meu escritório e pediu pra eu colocá-lo na agenda. Culpa minha, evidentemente.</p>
+      <p>Mas não é sobre mim que eu quero falar. É sobre você reconhecer algum destes:</p>
+      <ul class="pains">
+        <li>Seu produto é bom, mas você não consegue cobrar o que ele vale. Vive na guerra de preço com gente que cobra metade.</li>
+        <li>Não sabe de onde vem o próximo cliente. Vive de indicação, de post que viraliza, de sorte disfarçada de estratégia.</li>
+        <li>Já comprou o "método" de um guru e virou escravo do próprio negócio.</li>
+        <li>Chega no fim do mês cansado, com a sensação de que a culpa é sua.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- ================= PRA QUEM É ================= -->
-<section class="paper fit">
+<!-- 3. VIRADA: o mecanismo -->
+<section class="turn" id="diagnostico">
   <div class="wrap">
-    <p class="room">Sala III</p>
-    <h2>Pra quem é. E pra quem não é.</h2>
+    <p class="label">O que ninguém mede</p>
+    <h2>O seu negócio exige mais horas do que você tem.</h2>
+    <div class="turn__grid">
+      <div class="turn__text">
+        <p>Todo mundo te disse pra se organizar melhor, acordar mais cedo, ter mais disciplina. Ninguém te mostrou a conta que vem antes disso: quantas horas o seu modelo de negócio exige, e quantas horas você realmente tem.</p>
+        <p>Eu vi isso no corporativo. Meta ambiciosa apresentada com convicção, aplaudida em reunião e abandonada em silêncio na execução. Ninguém perguntava se existia capacidade pra aquilo. Quando falhava, a culpa caía nas pessoas.</p>
+        <p>Gente competente se sentindo incompetente. Por causa de uma conta que ninguém fez.</p>
+        <p>Essa conta tem nome aqui: <strong>Matriz de Horários</strong>. Ela mostra se o modelo que você opera cabe na sua vida, antes de você gastar mais um mês tentando fazer caber.</p>
+      </div>
+      <aside class="turn__questions">
+        <p class="label">O que a Matriz responde</p>
+        <ul>
+          <li>Esse cliente cabe na minha agenda?</li>
+          <li>Preciso contratar agora, ou ainda dá?</li>
+          <li>Esse preço paga as horas que eu gasto?</li>
+          <li>Meu negócio aguenta a meta que eu defini?</li>
+        </ul>
+        <p class="turn__end">Quando a conta não fecha, nenhuma disciplina resolve.</p>
+      </aside>
+    </div>
+  </div>
+</section>
 
-    <div class="cols">
-      <div class="col">
+<!-- 4. TRANSFORMAÇÃO -->
+<section class="shift" id="transformacao">
+  <div class="wrap">
+    <p class="label">Quando a conta fecha</p>
+    <h2>O que muda na prática.</h2>
+    <div class="shift__table" role="table" aria-label="Antes e depois">
+      <div class="shift__head" role="row"><span role="columnheader">Hoje</span><span role="columnheader">Dentro do Clube</span></div>
+      <div class="shift__row" role="row">
+        <p role="cell">Você aceita todo cliente que aparece, porque não sabe se pode recusar.</p>
+        <p role="cell">Você tem número pra dizer não, sem desculpa e sem culpa.</p>
+      </div>
+      <div class="shift__row" role="row">
+        <p role="cell">Contrata no escuro, quando o desespero aperta.</p>
+        <p role="cell">Você sabe quando contratar, quantas pessoas e pra fazer o quê.</p>
+      </div>
+      <div class="shift__row" role="row">
+        <p role="cell">Cobra preço medroso e rala pra compensar.</p>
+        <p role="cell">Você precifica pelas horas que gasta e pelo valor que entrega, e sustenta o preço.</p>
+      </div>
+      <div class="shift__row" role="row">
+        <p role="cell">Acorda achando que o problema é você.</p>
+        <p role="cell">Você descobre que o modelo é que não fechava. A culpa muda de endereço.</p>
+      </div>
+      <div class="shift__row" role="row">
+        <p role="cell">Vive de lançamento, de indicação e de sorte.</p>
+        <p role="cell">Você constrói um negócio que cabe nas horas que você tem, com previsibilidade.</p>
+      </div>
+    </div>
+    <p class="shift__note">Isso não vem de motivação nem de tecnicazinha. Vem de diagnóstico: entender a estrutura antes de mexer no que quer que seja.</p>
+  </div>
+</section>
+
+<!-- 5. PROVAS -->
+<section class="cases" id="casos">
+  <div class="wrap">
+    <p class="label">Quem já aplicou</p>
+    <h2>O método funciona com gente de verdade.</h2>
+    <p class="cases__intro">Estes são alunos do Fundamentos e da mentoria Íntegros, onde o mesmo método é aplicado com acompanhamento. O Clube guarda esse método inteiro, sem o acompanhamento individual.</p>
+    <div class="cases__grid">
+      <article>
+        <h3>Mateus Almeida</h3>
+        <p class="cases__result">De R$ 20k pra mais de R$ 70k por mês</p>
+        <p>Terapeuta de casais. Chegou faturando 20k e achando que o problema era falta de cliente. Não era. Era modelo. Redimensionou a entrega, ajustou o ticket, e em pouco tempo triplicou o faturamento.</p>
+      </article>
+      <article>
+        <h3>Juliana Arnoni</h3>
+        <p class="cases__result">R$ 9k em 48 horas</p>
+        <p>Terapeuta. Fez 9 mil de faturamento nas primeiras 48 horas depois de entrar. Ela já tinha o que precisava e só não sabia como organizar. Hoje fatura mais de 26k por mês.</p>
+      </article>
+      <article>
+        <h3>Laís Matos</h3>
+        <p class="cases__result">De lançamento pra R$ 40k por mês recorrente</p>
+        <p>Vivia de lançamento. Aquela montanha-russa de faturar 15k num mês e não saber se o próximo ia existir. Mudou pra modelo de acompanhamento e estabilizou em 40k por mês.</p>
+      </article>
+      <article>
+        <h3>Alam Carrion</h3>
+        <p class="cases__result">Pediu demissão do CLT</p>
+        <p>Tinha um negócio de infoprodutos que variava o faturamento todo mês. Reestruturou, bateu 30k no primeiro mês e pediu demissão. A conta finalmente fechou.</p>
+      </article>
+    </div>
+    <p class="cases__note">Resultados individuais. Cada pessoa parte de um ponto diferente e não há garantia de faturamento.</p>
+  </div>
+</section>
+
+<!-- 6. O ACERVO -->
+<section class="index" id="acervo">
+  <div class="wrap">
+    <p class="label">Índice do acervo</p>
+    <h2>O que você leva pra dentro.</h2>
+    <p class="index__intro">É um acervo. Sem módulo secreto, sem bônus de última hora e sem segredo guardado pra depois. Você entra e anda por ele no ritmo que a vida deixar.</p>
+
+    <ul class="toc">
+      <li>
+        <div class="toc__row"><h3>O método inteiro</h3><i></i><span>do diagnóstico à decisão</span></div>
+        <p>A forma como eu penso modelo de negócio, preço e tempo, incluindo a Matriz de Horários. A lógica que sustenta o resto, na ordem em que faz sentido.</p>
+      </li>
+      <li>
+        <div class="toc__row"><h3>Todas as gravações</h3><i></i><span>tudo guardado</span></div>
+        <p>Cada aula, cada encontro, cada explicação que eu já gravei. Você não precisa ter estado presente. Volta e assiste quando a vida pedir, inclusive quando a dúvida bater numa terça às onze da noite.</p>
+      </li>
+      <li>
+        <div class="toc__row"><h3>Atualização</h3><i></i><span>a cada 15 dias</span></div>
+        <p>O acervo não fica parado. Entra coisa nova: o que eu aprendi, o que mudou no mercado, o que eu errei e corrigi.</p>
+      </li>
+      <li>
+        <div class="toc__row"><h3>Acesso</h3><i></i><span>12 meses</span></div>
+        <p>Um pagamento e o ano inteiro dentro, com todas as atualizações do período.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- OBRA EM DESTAQUE -->
+<section class="feature" aria-label="Obra">
+  <div class="feature__grid">
+    <figure class="plate feature__plate">
+      <div class="plate__mat"><img src="img/hemessen-vocacao-sao-mateus.webp" alt="Pintura: A Vocação de São Mateus, de Jan Sanders van Hemessen, com um cobrador de impostos entre moedas, livro de contas e tinteiro" loading="lazy"></div>
+      <figcaption class="plate__label"><strong>A Vocação de São Mateus · Jan Sanders van Hemessen</strong> Um cobrador de impostos, a mesa de contas e uma decisão.</figcaption>
+    </figure>
+    <div class="feature__text">
+      <p class="label">Obra</p>
+      <h2>Decidir sempre pesou.</h2>
+      <p>Muito antes de existir planilha, alguém já pintava a dúvida de quem tem a mesa de contas à frente e precisa escolher o que fazer com ela.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. PRA QUEM -->
+<section class="fit">
+  <div class="wrap">
+    <p class="label">Pra quem é</p>
+    <h2>E pra quem não é.</h2>
+    <div class="fit__grid">
+      <div class="fit__yes">
         <h3>Vai gostar daqui se</h3>
         <ul>
-          <li>Você tem um negócio, ou tá tentando ter, e já desconfia que o problema não é falta de esforço.</li>
-          <li>Você trabalha mais do que quando era CLT e o resultado não acompanha.</li>
+          <li>Você tem um negócio, ou tá construindo um, e desconfia que o problema não é falta de esforço.</li>
+          <li>Trabalha mais do que quando era CLT e o resultado não acompanha.</li>
           <li>Já comprou "método" de guru e sobrou só a nota fiscal.</li>
-          <li>Prefere entender a lógica das coisas do que copiar o passo a passo de alguém.</li>
-          <li>Quer um lugar pra voltar toda vez que bater a dúvida, sem depender de agenda de ninguém.</li>
+          <li>Prefere entender a lógica das coisas a copiar o passo a passo de alguém.</li>
         </ul>
       </div>
-      <div class="col col--no">
+      <div class="fit__no">
         <h3>Melhor nem entrar se</h3>
         <ul>
-          <li>Você procura o segredo. A tecnicazinha que vai fazer o negócio faturar sozinho em trinta dias.</li>
+          <li>Você procura o segredo, a tecnicazinha que faz o negócio faturar sozinho em trinta dias.</li>
           <li>Quer que eu faça por você. O acervo mostra o caminho, mas quem anda é você.</li>
-          <li>Acha que sucesso é Rolex, terno e foto de palco. Aqui o assunto é outro.</li>
+          <li>Acha que sucesso é Rolex, terno e foto de palco.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PAUSA / PINTURA 2 ================= -->
-<section class="quote-band">
-  <div class="canvas canvas--green" aria-hidden="true">
-    <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice"><rect width="1600" height="700" fill="#101a15"/><g filter="url(#paint)"><ellipse cx="400" cy="300" rx="560" ry="300" fill="#24392e"/><ellipse cx="1250" cy="420" rx="520" ry="260" fill="#3d4a2c"/><ellipse cx="1100" cy="200" rx="300" ry="140" fill="#8b7a43"/><ellipse cx="800" cy="680" rx="900" ry="160" fill="#0a100d"/></g><rect width="1600" height="700" filter="url(#bristle)" opacity=".25"/></svg>
-    <div class="plate" style="--img:url('img/obra-2.jpg')"></div>
-    <div class="vignette"></div>
+<!-- CREDO -->
+<section class="creed">
+  <figure class="plate creed__plate">
+    <div class="plate__mat"><img src="img/cranach-criancas.webp" alt="Pintura: Cristo abençoando as crianças, de Lucas Cranach o Jovem e oficina" loading="lazy"></div>
+    <figcaption class="plate__label"><strong>Cristo abençoando as crianças · Cranach o Jovem e oficina</strong> "Deixai vir a mim as crianças." (Mc 10)</figcaption>
+  </figure>
+  <div class="creed__text">
+    <p class="label">Por quem</p>
+    <blockquote>Meu sucesso neste mundo é almoçar com meus filhos todos os dias.</blockquote>
+    <p>Um privilégio inigualável. Foi por isso que eu reorganizei o meu negócio, e é por isso que o acervo existe.</p>
+    <p class="creed__cite">Kevin Eger</p>
   </div>
-  <blockquote>
-    <p>Meu sucesso neste mundo é almoçar com meus filhos todos os dias.<br><em>Um privilégio inigualável.</em></p>
-    <cite>Kevin Neger</cite>
-  </blockquote>
 </section>
 
-<!-- ================= A OFERTA ================= -->
-<section class="paper offer" id="entrar">
-  <div class="wrap wrap--narrow">
-    <p class="room">Sala IV</p>
-    <h2>A conta</h2>
-    <p class="sub">Pra você não precisar de calculadora, deixei tudo aqui na mesa.</p>
+<!-- CARTA: o motivo do desconto -->
+<section class="letter" id="carta">
+  <div class="letter__grid">
+    <p class="label letter__label">Uma carta curta</p>
+    <h2 class="letter__title">Quarenta mil.</h2>
 
-    <div class="ledger">
-      <div class="row"><span>Mensal, 12 meses × R$ 97</span><span>R$ 1.164</span></div>
-      <div class="row"><span>Anual, preço de sempre</span><span>R$ 997</span></div>
-      <div class="row row--now"><span>Anual, reabertura <em>(40% a menos)</em></span><span>R$ 597</span></div>
+    <div class="letter__body">
+      <p class="first">Eu ainda acho esse número estranho.</p>
+      <p>Quarenta mil pessoas me ouvem falar de negócio, de família, de burnout e, de vez em quando, de gurus. Com sarcasmo, admito.</p>
+      <p>Eu poderia fazer uma festa. Postar um print. Escrever "gratidão" e vender um curso novo na sequência.</p>
+      <p>Mas não vou.</p>
+      <p class="with-note"><span class="note">Era isso: R$ 997 no ano, ou R$ 97 no mês.</span>O que eu fiz foi abrir o acervo. O Clube Íntegros guarda tudo que eu gravei, escrevi e aprendi errando no meu próprio negócio. Eu cobrava R$ 997 por ano, ou R$ 97 por mês. Pra quem chegou agora, o ano inteiro custa R$ 597.</p>
+      <p class="close">Quarenta por cento a menos. Obrigado, sem discurso.</p>
+      <p class="signature">Kevin Eger</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. OFERTA -->
+<section class="offer" id="oferta">
+  <div class="offer__grid">
+    <div class="offer__intro">
+      <p class="label">Entrar no acervo</p>
+      <h2>A conta.</h2>
+      <p>Deixei tudo na mesa. O mensal continua existindo, mas o anual agora custa pouco mais da metade dos doze meses.</p>
+
+      <dl class="ledger">
+        <div><dt>Mensal, 12 × R$ 97</dt><i></i><dd>R$ 1.164</dd></div>
+        <div><dt>Anual, preço de sempre</dt><i></i><dd>R$ 997</dd></div>
+        <div class="now"><dt>Anual, reabertura</dt><i></i><dd>R$ 597</dd></div>
+      </dl>
+
+      <div class="stay">
+        <h3>E o custo de ficar como está?</h3>
+        <p>Cada mês operando um modelo que não fecha é desgaste acumulado: cliente que não devia ter aceitado, preço que não paga as horas, domingo que você não recupera. Quanto mais tempo no modelo errado, mais compromisso você assume em cima dele, e mais difícil fica mudar.</p>
+      </div>
+
+      <p class="offer__after">O anual volta a R$ 997 quando a reabertura acabar. Os R$ 997 sempre foram o valor justo do que tem lá dentro. O desconto é um agradecimento.</p>
     </div>
 
-    <div class="ticket">
-      <div class="ticket__tag">Plano anual · Reabertura</div>
-      <p class="ticket__old"><s>R$ 997</s></p>
-      <p class="ticket__price"><span class="cur">R$</span>597</p>
-      <p class="ticket__per">por ano, o que dá R$ 49,75 por mês</p>
-      <ul class="ticket__list">
-        <li>Acesso ao acervo completo por 12 meses</li>
-        <li>O método inteiro e todas as gravações</li>
-        <li>Atualizações a cada quinze dias</li>
-        <li>7 dias de garantia, como manda a lei, sem cara feia</li>
-      </ul>
-      <a class="btn btn--gold" href="#" data-checkout>Quero entrar no acervo</a>
-      <p class="ticket__note" id="deadline-2" hidden></p>
+    <aside class="wall-label" aria-label="Ficha da oferta">
+      <p class="wall-label__top">Ficha da obra</p>
+      <h3>Clube Íntegros</h3>
+      <dl class="spec">
+        <div><dt>Autor</dt><dd>Kevin Eger</dd></div>
+        <div><dt>Conteúdo</dt><dd>Método completo, Matriz de Horários e todas as gravações</dd></div>
+        <div><dt>Atualização</dt><dd>A cada quinze dias</dd></div>
+        <div><dt>Acesso</dt><dd>12 meses</dd></div>
+        <div><dt>Garantia</dt><dd>7 dias, como manda a lei</dd></div>
+      </dl>
+      <p class="wall-label__price"><s>R$ 997</s><strong><span>R$</span>597</strong><em>à vista, ou 12x de R$ 59,69 no cartão</em></p>
+      <a class="btn btn--block" href="#" data-checkout>Entrar no anual <span aria-hidden="true">→</span></a>
+      <p class="deadline" id="deadline-2" hidden></p>
+      <p class="wall-label__alt">Prefere pagar por mês? <a href="#" data-checkout-monthly>R$ 97 por mês</a></p>
+    </aside>
+  </div>
+
+  <div class="guarantee">
+    <p class="label">Risco do meu lado</p>
+    <p class="guarantee__text">Você tem sete dias pra entrar, assistir e decidir. Se não fizer sentido, pede o dinheiro de volta pelo suporte. É direito seu, e eu não faço pergunta.</p>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="faq">
+  <div class="faq__grid">
+    <div>
+      <p class="label">Perguntas diretas</p>
+      <h2>Antes de entrar.</h2>
     </div>
-
-    <p class="after">O preço volta a R$ 997 quando a reabertura acabar. Não porque eu queira criar pressão. É que os R$ 997 sempre foram o valor justo do que tem lá dentro, e o desconto é um agradecimento, não uma nova tabela.</p>
+    <div class="faq__list">
+      <details>
+        <summary>Já comprei tanto curso. Por que esse seria diferente?</summary>
+        <p>Porque eu não vendo tática. Antes de qualquer tática, você diagnostica se o modelo que opera cabe nas horas que tem. A maioria dos cursos assume que o modelo está certo e que você precisa render mais. Aqui a pergunta vem antes.</p>
+      </details>
+      <details>
+        <summary>Funciona pro meu nicho?</summary>
+        <p>O método olha pro tempo e pro modelo, não pro nicho. Entre os alunos há terapeutas, infoprodutores, donos de agência, gestores de tráfego, mentores e donos de escola.</p>
+      </details>
+      <details>
+        <summary>Preciso ter um negócio grande?</summary>
+        <p>Não. Preciso que você tenha um negócio, ou esteja construindo um. Tem gente que entra faturando pouco e gente que entra faturando bem e dormindo mal. A pergunta de fundo é a mesma: esse modelo fecha com o tempo que eu tenho?</p>
+      </details>
+      <details>
+        <summary>Não tenho tempo pra mais um conteúdo.</summary>
+        <p>Justamente por isso é um acervo. Está tudo gravado, você assiste no seu ritmo e volta quando precisar. E o que ele ensina é a recuperar horas, não a gastar mais.</p>
+      </details>
+      <details>
+        <summary>É só gravação? Vou ficar sozinho?</summary>
+        <p>É acervo. Você assiste, aplica e volta quando precisar. Se quiser alguém olhando o seu caso de perto, existe o Fundamentos, que é outro nível de acompanhamento. Muita gente começa por aqui, e tudo bem.</p>
+      </details>
+      <details>
+        <summary>Por que o desconto agora?</summary>
+        <p>Cheguei a quarenta mil seguidores e achei justo que quem chegou depois tivesse uma porta mais barata. Só isso.</p>
+      </details>
+      <details>
+        <summary>E se eu não gostar?</summary>
+        <p>Você tem sete dias pra pedir o dinheiro de volta, direto pelo suporte. É direito seu, e eu não faço pergunta.</p>
+      </details>
+      <details>
+        <summary>Já assino o mensal. Como fica?</summary>
+        <p>Fala com a gente pelo suporte e a gente resolve. Ninguém deveria pagar duas vezes por causa de calendário.</p>
+      </details>
+      <details>
+        <summary>O que acontece depois dos doze meses?</summary>
+        <p>Você decide. Se o acervo valeu a pena, renova. Se não, sai com tudo que aprendeu e sem briga.</p>
+      </details>
+    </div>
   </div>
 </section>
 
-<!-- ================= FAQ ================= -->
-<section class="ink faq">
-  <div class="wrap wrap--narrow">
-    <p class="room">Sala V</p>
-    <h2>O que costumam me perguntar</h2>
-
-    <details>
-      <summary>Preciso ter um negócio grande pra aproveitar?</summary>
-      <p>Não. Preciso que você tenha um negócio, ou que esteja construindo um. Tem gente que entra faturando pouco e gente que entra faturando bem e dormindo mal. O acervo serve pros dois, porque a pergunta de fundo é a mesma: esse modelo fecha com o tempo que eu tenho?</p>
-    </details>
-    <details>
-      <summary>É só gravação? Vou ficar sozinho?</summary>
-      <p>É acervo. Você assiste, aplica e volta quando precisar. Se você quer alguém olhando o seu caso de perto, existe o Fundamentos, que é outro nível de acompanhamento. Mas muita gente começa por aqui, e tudo bem.</p>
-    </details>
-    <details>
-      <summary>Por que o desconto agora?</summary>
-      <p>Porque cheguei a quarenta mil seguidores e achei justo que quem chegou depois tivesse uma porta mais barata. Só isso. Não tem história de bastidor.</p>
-    </details>
-    <details>
-      <summary>E se eu não gostar?</summary>
-      <p>Você tem sete dias pra pedir o dinheiro de volta, direto pelo suporte. É direito seu, e eu não faço pergunta.</p>
-    </details>
-    <details>
-      <summary>Já assino o mensal. Como fica?</summary>
-      <p>Fala com a gente pelo suporte e a gente resolve. Não quero que ninguém pague duas vezes por causa de um calendário.</p>
-    </details>
-    <details>
-      <summary>O que acontece depois dos doze meses?</summary>
-      <p>Você decide. Se o acervo tiver valido a pena, renova. Se não, sai com tudo que aprendeu e sem briga.</p>
-    </details>
-  </div>
-</section>
-
-<!-- ================= FECHAMENTO ================= -->
-<section class="closing">
-  <div class="canvas canvas--night" aria-hidden="true">
-    <svg viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice"><rect width="1600" height="800" fill="#120c09"/><g filter="url(#paint)"><ellipse cx="800" cy="200" rx="620" ry="260" fill="#7a4a22"/><ellipse cx="800" cy="170" rx="260" ry="120" fill="#e0b46a"/><ellipse cx="300" cy="760" rx="700" ry="200" fill="#2a130d"/><ellipse cx="1350" cy="720" rx="600" ry="180" fill="#35200f"/></g><rect width="1600" height="800" filter="url(#bristle)" opacity=".25"/></svg>
-    <div class="plate" style="--img:url('img/obra-3.jpg')"></div>
-    <div class="vignette"></div>
-  </div>
-  <div class="closing__inner wrap wrap--narrow">
-    <h2>Meu filho foi até o meu escritório e pediu pra eu colocá-lo na agenda.</h2>
-    <p>Culpa minha, evidentemente.</p>
-    <p>Eu construí um negócio que me consumia e demorei pra perceber. O acervo existe porque eu não quero que você demore tanto quanto eu.</p>
-    <p>A pergunta que fica é pra você: o seu negócio cabe na sua vida, ou a sua vida tá cabendo no seu negócio?</p>
-    <a class="btn btn--gold" href="#entrar" data-checkout>Entrar no acervo por R$ 597</a>
-    <p class="ps"><strong>P.S.</strong> Se você chegou até aqui e ainda tá em dúvida, tudo bem. Dúvida é saudável. Mas a reabertura tem fim, e o acervo, quando você entra, não sai mais do seu lado.</p>
+<!-- 10. FECHAMENTO -->
+<section class="final">
+  <div class="final__inner">
+    <h2>A pergunta que fica é pra você.</h2>
+    <p class="final__q">O seu negócio cabe na sua vida, ou a sua vida tá cabendo no seu negócio?</p>
+    <p>Eu demorei pra perceber qual das duas era a minha. O acervo existe pra você não demorar tanto quanto eu.</p>
+    <a class="btn btn--light" href="#" data-checkout>Entrar no acervo por R$ 597 <span aria-hidden="true">→</span></a>
+    <p class="final__ps"><strong>P.S.</strong> Se você chegou até aqui e ainda tá em dúvida, tudo bem. Dúvida é saudável. Mas a reabertura tem fim, e o que você aprende lá dentro não sai mais do seu lado.</p>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <p class="mark mark--foot">Íntegros<span>Clube</span></p>
-  <p>© <span id="year">2026</span> Íntegros · Todos os direitos reservados</p>
-  <p class="legal">Os resultados dependem da aplicação de cada pessoa. Este conteúdo não garante faturamento.</p>
+  <a class="wordmark" href="#topo"><em>Íntegros</em><span>Clube</span></a>
+  <p>© <span id="year">2026</span> Íntegros. Os resultados dependem da aplicação de cada pessoa e não há garantia de faturamento.</p>
+  <p class="credits">Obras em domínio público: Jusepe de Ribera, <em>São Jerônimo</em> (Cleveland Museum of Art); Jean-François Millet, <em>Retreat from the Storm</em>, Jan Sanders van Hemessen, <em>A Vocação de São Mateus</em>, e Lucas Cranach o Jovem e oficina, <em>Cristo abençoando as crianças</em> (The Metropolitan Museum of Art).</p>
 </footer>
+
+<!-- barra fixa no celular -->
+<div class="sticky" id="sticky" hidden>
+  <p><strong>R$ 597</strong> <s>R$ 997</s> <span>plano anual</span></p>
+  <a class="btn" href="#oferta">Entrar <span aria-hidden="true">→</span></a>
+</div>
 
 <script src="main.js"></script>
 </body>

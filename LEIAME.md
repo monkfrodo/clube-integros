@@ -1,17 +1,11 @@
-# Clube Íntegros — página de reabertura (plano anual, R$ 597)
+# Clube Íntegros — redesign
 
-Site estático (`index.html`, `style.css`, `main.js`, `img/`). Sem build. Mesma identidade do Subida
-(verde profundo, ouro, creme; Playfair Display, Instrument Serif e Inter locais).
+Página estática em `index.html`, `style.css` e `main.js`, sem build nem runtime do editor. O HTML enviado por Kevin foi convertido preservando a copy e a direção visual específica da peça.
 
-## O que trocar (topo do `main.js`)
-- `CHECKOUT_ANUAL` e `CHECKOUT_MENSAL`: links dos checkouts.
-- `OFFER_END`: data final da reabertura. Com `null`, nenhuma data aparece.
+Os checkouts anual e mensal apontam para os destinos confirmados no JavaScript do site público em 12/10/2026. Pinturas vêm do Wikimedia Commons e imagens de projetos vêm de `fundamentos.integros.org`; essas URLs precisam de revisão visual antes de publicar. Os ativos existentes em `img/` foram preservados.
 
-## Imagens
-As pinturas (`img/`) são do acervo de domínio público do Met e do Cleveland Museum of Art, vindas da pasta do Drive. `caracciolo-vocacao-sao-mateus.webp` ficou de reserva, sem uso na página.
+Interações: sintomas e diagnóstico, FAQ, progresso de leitura, navegação por seções, barra móvel, contagem animada, paralaxe e movimento do cursor em dispositivos com ponteiro fino. A preferência por movimento reduzido desliga as animações principais.
 
-## Conferir antes de publicar
-- 7 dias de garantia e a resposta sobre renovação no FAQ: precisam bater com a regra real do checkout.
-- "Já assino o mensal": definir o que acontece de verdade.
-- A página diz que o anual volta a R$ 997 depois da reabertura.
-- Nenhum depoimento foi inventado. Se tiver reais, cabe uma seção antes de "A conta".
+Esta branch é para revisão. Push em `main` publica automaticamente no Cloudflare Pages; não publicar sem aprovação de Kevin.
+
+Antes de publicar, confirmar os termos comerciais da copy (preço, quantidade de aulas, atualizações, garantia, renovação e duração da promoção) e revisar desktop e mobile no navegador. A revisão visual automatizada local foi bloqueada pela política do navegador nesta sessão.

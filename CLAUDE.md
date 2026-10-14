@@ -1,7 +1,7 @@
 # Clube Íntegros — redesign em revisão
 
 ## O que é
-Página de vendas estática do Clube Íntegros (plano anual R$ 597, mensal R$ 97). HTML, CSS e JS puros, sem build. Redesign fornecido por Kevin e convertido do export do editor; preservar a copy e a direção visual da peça.
+Página de vendas estática do Clube Íntegros (plano anual R$ 997, mensal R$ 97; oferta de 40% encerrada em 14/10/2026). HTML, CSS e JS puros, sem build. Redesign fornecido por Kevin e convertido do export do editor; preservar a copy e a direção visual da peça.
 
 ## Produção
 - Domínio: `clube.integros.org`
